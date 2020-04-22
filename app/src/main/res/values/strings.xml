@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">CoronaShield</string>
+    <string name="wifi_location_msg">Android exige dorénavant d\'activer le service de localisation via Wifi et réseaux mobiles (pas le GPS)
+        afin de scanner les Hotspots WiFi. Nous n\'utilisons pas le service de localisation et protégeons vos données personnelles.\nCependant son activation est nécessaire pour cette fonctionnalité\nPlus d\'informations dans la rubrique "About"
+    </string>
+    <string name="wifi_understood">Compris</string>
+    <string name="wifi_cancel">Annuler</string>
+    <string name="title_activity_settings">Réglages</string>
+
+    <!-- Preference Titles -->
+    <string name="settings_title">Réglages</string>
+    <string name="paranoid_title">Mode paranoiaque</string>
+    <string name="paranoid_summary">Protection sur le principe de précaution</string>
+    <string name="modes_title">MODES</string>
+    <string name="other_title">AUTRE</string>
+    <string name="version_title">Version</string>
+    <string name="about_title">Informations CovidShield</string>
+    <string name="usage_title">Guide</string>
+
+
+    <!-- Notification strings-->
+    <string name="notif_title">Protection CovidShield</string>
+    <string name="notif_content">Active</string>
+    <string name="covidShieldLogoDescription">Protection Covid, protection données personnelles</string>
+    <string name="aboutHeading">Protection Covid, Protection données personnelles</string>
+    <string name="aboutDescription">Copyright (c) 2020. Tous droits réservés\n\n
+CovidShield est une application mutli-sensorielle permettant d\'utiliser différentes technologies
+    telles que le Bluetooth et le Wifi afin de se protéger contre la maladie du Covid-19\n\n
+Elle permet d\'avértir l\'utilisateur quand il a été exposé à la maladie afin d\'adopter les mesures nécessaires pour éviter
+La contamination d\'autrui et détecter la maladie à un stade précoce</string>
+    <string name="aboutMoreLink"> Plus d\'informations sur covidshield.ma/terms</string>
+    <string name="guide">GUIDE</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="wifi">WiFi</string>
+    <string name="bluetoothInstructions">Afin d\'utiliser la technologie Bluetooth dans la protection CoronaShield,
+    activer le Bluetooth depuis l\'application et vérifier qu\'il ne soit pas desactivé à partir des réglages du système</string>
+    <string name="wifiInstructions">Afin d\'utiliser Le WiFi pour votre protéction, activer le depuis l\'application et vérifiez
+    qu\'il n\'est pas desactivé dans les réglages du téléphone\
+    Dans les versions récentes d\'Android, il est également nécessaire d\'activer l\'utilisation du "Wi-Fi et réseaux mobiles" dans le service de localisation.\n
+    Nous n\'utilisons nullement ce service dans l\'application CoronaShield. Cependant c\'est une contrainte imposée par Android afin de pouvoir scanner les hotspots Wi-Fi. </string>
+    <string name="activerLocationLink">Cliquez ici pour l\'activer</string>
+    <string name="sain">Sain</string>
+    <string name="atteint">Atteint</string>
+    <string name="suspect">Suspect</string>
+    <string name="positifButton">Je suis atteint</string>
+    <string name="suspect_notif_content">Vous avez rencontré une personne atteinte du Covid-19</string>
+
+
+</resources>
