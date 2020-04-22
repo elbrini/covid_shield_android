@@ -1,4 +1,4 @@
-package ma.corona.shield.scanners
+package ma.covid.shield.scanners
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -6,7 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.util.Log
 
-import ma.corona.shield.db.DataStorage
+import ma.covid.shield.db.DataStorage
 
 import java.time.Instant
 

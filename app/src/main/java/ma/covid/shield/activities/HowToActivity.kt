@@ -1,11 +1,11 @@
-package ma.corona.shield.activities
+package ma.covid.shield.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import kotlinx.android.synthetic.main.activity_how_to.*
-import ma.corona.shield.R
+import ma.covid.shield.R
 
 class HowToActivity : AppCompatActivity() {
 

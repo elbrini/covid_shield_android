@@ -1,21 +1,16 @@
-package ma.corona.shield.scanners
+package ma.covid.shield.scanners
 
-import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.net.wifi.WifiManager
 import android.util.Log
 
-import ma.corona.shield.db.DataStorage
+import ma.covid.shield.db.DataStorage
 
 import java.time.Instant
 import java.util.Collections
 
 import java.lang.Math.min
-import java.util.logging.Handler
-import android.os.Looper
-import android.R.attr.name
-
 
 
 class WifiTagScanner(ctx: Context) : TagScanner(ctx) {

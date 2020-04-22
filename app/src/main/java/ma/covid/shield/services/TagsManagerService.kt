@@ -1,13 +1,13 @@
-package ma.corona.shield.services
+package ma.covid.shield.services
 
 import android.app.PendingIntent
 import android.app.Service
 import android.content.*
 import android.os.IBinder
 import android.util.Log
-import ma.corona.shield.MatchScorer
-import ma.corona.shield.TagsManager
-import ma.corona.shield.db.DataStorage
+import ma.covid.shield.MatchScorer
+import ma.covid.shield.TagsManager
+import ma.covid.shield.db.DataStorage
 import org.json.JSONObject
 import java.time.Instant
 import java.time.temporal.ChronoUnit
@@ -15,15 +15,15 @@ import java.util.ArrayList
 import android.content.Intent
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
-import ma.corona.shield.MainActivity
+import ma.covid.shield.MainActivity
 import android.app.NotificationManager
 import android.app.NotificationChannel
 import android.os.Build
 import androidx.core.app.NotificationManagerCompat
-import ma.corona.shield.R
-import ma.corona.shield.scanners.BluetoothTagScanner
-import ma.corona.shield.scanners.TagScanner
-import ma.corona.shield.scanners.WifiTagScanner
+import ma.covid.shield.R
+import ma.covid.shield.scanners.BluetoothTagScanner
+import ma.covid.shield.scanners.TagScanner
+import ma.covid.shield.scanners.WifiTagScanner
 
 
 class TagsManagerService : Service() {
@@ -205,7 +205,7 @@ class TagsManagerService : Service() {
     companion object {
 
 
-        val NOTIFICATION = "ma.corona.shield.service.receiver"
+        val NOTIFICATION = "ma.covid.shield.service.receiver"
 
         val CMD_KEY = "TagsManagerServiceCmd"
         val CMD_UPLOAD_DATA = 4000

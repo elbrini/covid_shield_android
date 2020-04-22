@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ma.corona.shield">
+    package="ma.covid.shield">
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -16,23 +16,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activities.HowToActivity"></activity>
-        <activity android:name=".activities.AboutActivity" />
+        <activity android:name="ma.covid.shield.activities.HowToActivity"></activity>
+        <activity android:name="ma.covid.shield.activities.AboutActivity" />
 
         <receiver
-            android:name=".receivers.RestartReceiver"
+            android:name="ma.covid.shield.receivers.RestartReceiver"
             android:enabled="true"
             android:exported="true" />
 
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="ma.covid.shield.activities.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/Theme.AppCompat.Light">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="ma.covid.shield.MainActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="ma.covid.shield.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,18 +40,18 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".MainActivity">
+        <receiver android:name="ma.covid.shield.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".receivers.RestartReceiver"
+            android:name="ma.covid.shield.receivers.RestartReceiver"
             android:enabled="true"
             android:exported="true" />
 
         <service
-            android:name=".services.TagsManagerService"
+            android:name="ma.covid.shield.services.TagsManagerService"
             android:enabled="true"
             android:exported="true" />
     </application>

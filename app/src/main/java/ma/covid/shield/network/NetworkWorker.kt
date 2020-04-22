@@ -1,4 +1,4 @@
-package ma.corona.shield.network
+package ma.covid.shield.network
 
 import android.content.Context
 import android.util.Log

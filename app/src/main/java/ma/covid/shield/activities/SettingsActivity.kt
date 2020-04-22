@@ -1,11 +1,11 @@
-package ma.corona.shield.activities
+package ma.covid.shield.activities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import ma.corona.shield.R
+import ma.covid.shield.R
 
 class SettingsActivity : AppCompatActivity() {
 

@@ -1,11 +1,11 @@
-package ma.corona.shield.network
+package ma.covid.shield.network
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import android.util.Log
 
-import ma.corona.shield.db.DataStorage
+import ma.covid.shield.db.DataStorage
 
 import org.json.JSONArray
 import org.json.JSONException

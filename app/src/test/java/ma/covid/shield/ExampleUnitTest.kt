@@ -1,4 +1,4 @@
-package ma.corona.shield
+package ma.covid.shield
 
 import org.junit.Test
 

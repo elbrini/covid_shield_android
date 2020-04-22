@@ -1,4 +1,4 @@
-package ma.corona.shield
+package ma.covid.shield
 
 import androidx.appcompat.app.AppCompatActivity
 
@@ -22,9 +22,9 @@ import android.location.LocationManager
 import android.os.Handler
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
-import ma.corona.shield.activities.HowToActivity
-import ma.corona.shield.activities.SettingsActivity
-import ma.corona.shield.services.TagsManagerService
+import ma.covid.shield.activities.HowToActivity
+import ma.covid.shield.activities.SettingsActivity
+import ma.covid.shield.services.TagsManagerService
 
 
 @RuntimePermissions

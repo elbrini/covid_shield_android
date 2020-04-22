@@ -1,11 +1,11 @@
-package ma.corona.shield.receivers
+package ma.covid.shield.receivers
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.widget.Toast
-import ma.corona.shield.services.TagsManagerService
+import ma.covid.shield.services.TagsManagerService
 
 class RestartReceiver : BroadcastReceiver() {
 

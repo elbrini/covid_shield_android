@@ -1,4 +1,4 @@
-package ma.corona.shield
+package ma.covid.shield
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("ma.corona.shield", appContext.packageName)
+        assertEquals("ma.covid.shield", appContext.packageName)
     }
 }

@@ -1,10 +1,9 @@
-package ma.corona.shield
+package ma.covid.shield
 
 import android.content.Context
 import android.util.Log
 
 import androidx.preference.PreferenceManager
-import java.util.concurrent.ThreadLocalRandom
 
 object MatchScorer {
 

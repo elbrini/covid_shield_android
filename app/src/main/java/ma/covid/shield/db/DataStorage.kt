@@ -1,14 +1,9 @@
-package ma.corona.shield.db
+package ma.covid.shield.db
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.nfc.Tag
 import android.preference.PreferenceManager
 import android.util.Log
-
-import ma.corona.shield.MatchScorer
-import ma.corona.shield.TagsManager
-import ma.corona.shield.network.NetworkManager
 
 import org.json.JSONArray
 import org.json.JSONException
@@ -16,13 +11,7 @@ import org.json.JSONObject
 
 import java.time.Instant
 import java.time.ZoneOffset
-import java.time.ZonedDateTime
-import java.time.temporal.ChronoUnit
-import java.time.temporal.TemporalUnit
 import java.util.ArrayList
-import java.util.Date
-
-import java.lang.Math.min
 
 class DataStorage(private val context: Context, val prefix: String) :
     SharedPreferences.OnSharedPreferenceChangeListener {

@@ -1,8 +1,8 @@
-package ma.corona.shield.activities
+package ma.covid.shield.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ma.corona.shield.R
+import ma.covid.shield.R
 
 class AboutActivity : AppCompatActivity() {
 

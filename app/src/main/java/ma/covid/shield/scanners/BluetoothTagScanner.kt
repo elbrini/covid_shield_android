@@ -1,11 +1,11 @@
-package ma.corona.shield.scanners
+package ma.covid.shield.scanners
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.content.Intent
 import android.util.Log
 
-import ma.corona.shield.db.DataStorage
+import ma.covid.shield.db.DataStorage
 
 import java.time.Instant
 import java.util.ArrayList
