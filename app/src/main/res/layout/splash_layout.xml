@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/background_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/content_offset_h"
+        android:layout_marginVertical="@dimen/content_offset_v"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="88dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/coronavirus_blue">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:textSize="35sp"
+            android:lineHeight="35sp"
+            android:layout_marginTop="0dp"
+            android:includeFontPadding="false"
+            android:textColor="#ffffffff"
+            android:fontFamily="@font/nexa_black"
+            android:text="@string/splash_appname"></TextView>
+
+        <TextView
+            android:id="@+id/slogan"
+            android:text="@string/slogan"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:lineHeight="48sp"
+            android:textSize="48sp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/nexa_black"
+            android:lineSpacingMultiplier="0.8"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:textAllCaps="true"
+            ></TextView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="57dp"
+        android:textSize="7sp"
+        android:textColor="#ffffffff"
+        android:letterSpacing="0.2"
+        android:textAllCaps="true"
+        android:text="© COPYRIGHT 2020. ALL RIGHTS RESERVED"></TextView>
+
+
+</FrameLayout>

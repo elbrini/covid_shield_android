@@ -55,7 +55,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+
+        setContentView(R.layout.splash_layout)
+
+
+        return
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationContext)
 
@@ -104,7 +109,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        registerReceiver(receiver, IntentFilter(
+        /*registerReceiver(receiver, IntentFilter(
                 TagsManagerService.NOTIFICATION))
 
         bluetoothButton?.setImageResource(
@@ -118,14 +123,14 @@ class MainActivity : AppCompatActivity() {
 
         updateProtectionStatus()
 
-        updateProfileStatus()
+        updateProfileStatus()*/
 
         super.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-        unregisterReceiver(receiver)
+        //unregisterReceiver(receiver)
     }
 
     /******* TAGS STUFF  *****/
@@ -197,7 +202,7 @@ class MainActivity : AppCompatActivity() {
         val alerted = sharedPreferences!!.getBoolean("wifi_alert", false)
         if (!alerted) {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Disclaimer")
+            builder.setTitle(getString(R.string.alert_title))
                 .setMessage(getString(R.string.wifi_location_msg))
                 .setCancelable(false)
                 .setPositiveButton(getString(R.string.wifi_understood)) { dialog, id ->

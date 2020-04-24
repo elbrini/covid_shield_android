@@ -1,7 +1,9 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <string name="app_name">CovidShield</string>
     <string name="wifi_location_msg">Android exige dorénavant d\'activer le service de localisation via Wifi et réseaux mobiles (pas le GPS)
-        afin de scanner les Hotspots WiFi. Nous n\'utilisons pas le service de localisation et protégeons vos données personnelles.\nCependant son activation est nécessaire pour cette fonctionnalité\nPlus d\'informations dans la rubrique "About"
+        afin de scanner les Hotspots WiFi. Nous n\'utilisons pas le service de localisation et protégeons vos données personnelles.
+        \nCependant son activation est nécessaire pour cette fonctionnalité
+        \nPlus d\'informations dans la rubrique \"Guide\"
     </string>
     <string name="wifi_understood">Compris</string>
     <string name="wifi_cancel">Annuler</string>
@@ -35,8 +37,8 @@ La contamination d\'autrui et détecter la maladie à un stade précoce</string>
     <string name="bluetoothInstructions">Afin d\'utiliser la technologie Bluetooth dans la protection CovidShield,
     activer le Bluetooth depuis l\'application et vérifier qu\'il ne soit pas desactivé à partir des réglages du système</string>
     <string name="wifiInstructions">Afin d\'utiliser Le WiFi pour votre protéction, activer le depuis l\'application et vérifiez
-    qu\'il n\'est pas desactivé dans les réglages du téléphone\
-    Dans les versions récentes d\'Android, il est également nécessaire d\'activer l\'utilisation du "Wi-Fi et réseaux mobiles" dans le service de localisation.\n
+    qu\'il n\'est pas desactivé dans les réglages du téléphone
+    \nDans les versions récentes d\'Android, il est également nécessaire d\'activer l\'utilisation du \"Wi-Fi et réseaux mobiles\" dans le service de localisation.\n
     Nous n\'utilisons nullement ce service dans l\'application CovidShield. Cependant c\'est une contrainte imposée par Android afin de pouvoir scanner les hotspots Wi-Fi. </string>
     <string name="activerLocationLink">Cliquez ici pour l\'activer</string>
     <string name="sain">Sain</string>
@@ -44,6 +46,10 @@ La contamination d\'autrui et détecter la maladie à un stade précoce</string>
     <string name="suspect">Suspect</string>
     <string name="positifButton">Je suis atteint</string>
     <string name="suspect_notif_content">Vous avez rencontré une personne atteinte du Covid-19</string>
+    <string name="alert_title">Information</string>
+    <string name="slogan"><font color='#ffffffff'>stop au </font><font color='#ff29abe2'>virus</font></string>
+    <string name="splash_appname">CovidShield</string>
+
 
 
 </resources>

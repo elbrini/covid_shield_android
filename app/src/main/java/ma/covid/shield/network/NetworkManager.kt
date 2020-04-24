@@ -135,7 +135,7 @@ class NetworkManager private constructor(context: Context) {
 
         private const val TAG = "NetworkManager"
         private const val TOKEN_KEY = "net_token"
-        private const val CHECK_PERIOD_SEC = 10
+        private const val CHECK_PERIOD_SEC = 120
 
         private var instance: NetworkManager? = null
 

@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#071A85</color>
     <color name="colorAccent">#0D61BA</color>
     <color name="powderBlue">#50bfff</color>
+    <color name="virusBlue">#ff29abe2</color>
 </resources>

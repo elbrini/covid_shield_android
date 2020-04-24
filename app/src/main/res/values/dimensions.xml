@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="content_offset_h">35dp</dimen>
+    <dimen name="content_offset_v">30dp</dimen>
+
+</resources>

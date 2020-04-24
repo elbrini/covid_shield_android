@@ -62,6 +62,7 @@ class NetworkWorker(internal var ctx: Context) {
 
     companion object {
 
+        //val SERVER_URL = "http://3.120.149.197:1234"
         val SERVER_URL = "http://192.168.1.4:1234"
         private val TAG = "NetworkWorker"
     }
