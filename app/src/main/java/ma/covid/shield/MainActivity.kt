@@ -20,8 +20,12 @@ import permissions.dispatcher.RuntimePermissions
 import android.content.SharedPreferences
 import android.location.LocationManager
 import android.os.Handler
+import android.view.View.GONE
+import android.webkit.RenderProcessGoneDetail
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_layout.*
+import kotlinx.android.synthetic.main.splash_layout.*
 import ma.covid.shield.activities.HowToActivity
 import ma.covid.shield.activities.SettingsActivity
 import ma.covid.shield.services.TagsManagerService
@@ -55,12 +59,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //setContentView(R.layout.activity_main)
-
-        setContentView(R.layout.splash_layout)
+        setContentView(R.layout.activity_main)
 
 
-        return
+
+        Thread(Runnable {
+            Thread.sleep(2000)
+            runOnUiThread {
+                splash.visibility = View.GONE
+                mainView.visibility = View.VISIBLE
+            }
+        }).start()
+
+
+
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationContext)
 
@@ -74,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         bluetoothButton!!.setOnClickListener {
             val enable = !bluetoothEnabled()
             if(enableBluetooth(enable))
-                    (it as ImageView).setImageResource(if (enable) R.drawable.bl_circle_blue else (R.drawable.bl_circle_grey))
+                    (it as ImageView).setImageResource(if (enable) R.mipmap.bluetooth_blue else (R.mipmap.bluetooth_white))
             Handler().postDelayed( {updateProtectionStatus()}, 1000)
 
         }
@@ -83,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         wifiButton!!.setOnClickListener {
             val enable = !wifiEnabled()
             if(enableWifi(enable))
-                (it as ImageView).setImageResource(if (enable) R.drawable.wifi_circle_blue else (R.drawable.wifi_circle_grey))
+                (it as ImageView).setImageResource(if (enable) R.mipmap.wifi_blue else (R.mipmap.wifi_white))
             Handler().postDelayed( {updateProtectionStatus()}, 1000)
 
         }
@@ -109,28 +121,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
-        /*registerReceiver(receiver, IntentFilter(
+        registerReceiver(receiver, IntentFilter(
                 TagsManagerService.NOTIFICATION))
 
         bluetoothButton?.setImageResource(
             if (bluetoothEnabled())
-                R.drawable.bl_circle_blue
-            else R.drawable.bl_circle_grey)
+                R.mipmap.bluetooth_blue
+            else R.mipmap.bluetooth_white)
         wifiButton?.setImageResource(
             if (wifiEnabled())
-                R.drawable.wifi_circle_blue
-            else R.drawable.wifi_circle_grey)
+                R.mipmap.wifi_blue
+            else R.mipmap.wifi_white)
 
         updateProtectionStatus()
 
-        updateProfileStatus()*/
+        updateProfileStatus()
 
         super.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-        //unregisterReceiver(receiver)
+        unregisterReceiver(receiver)
     }
 
     /******* TAGS STUFF  *****/
@@ -260,16 +272,15 @@ class MainActivity : AppCompatActivity() {
 
         protectionStatus.setImageDrawable(
             if(bluetoothMismatch() || wifiMismatch())
-                getDrawable(R.drawable.shield_yellow_exclmation)
+                getDrawable(R.mipmap.shield_yellow)
             else if(level == 0)
-                getDrawable(R.drawable.shield_red)
+                getDrawable(R.mipmap.shield_red)
             else if( level == 1)
-                getDrawable(R.drawable.shield_orange)
+                getDrawable(R.mipmap.shield_yellow)
             else
-                getDrawable(R.drawable.shield_green)
+                getDrawable(R.mipmap.shield_green)
         )
         val progress = 50 * level
-        protectionBar.progress = progress
         protectionLevel.text = "$progress%"
     }
 
@@ -294,9 +305,9 @@ class MainActivity : AppCompatActivity() {
         val level = getUserProfile()
         userStatus.setImageDrawable(
             when (level) {
-                0 -> getDrawable(R.drawable.user_green)
-                1 -> getDrawable(R.drawable.user_orange)
-                else -> getDrawable(R.drawable.user_red)
+                0 -> getDrawable(R.mipmap.user_green)
+                1 -> getDrawable(R.mipmap.user_yellow)
+                else -> getDrawable(R.mipmap.user_red)
             }
         )
         positiveButton.visibility = if(level == 2) View.GONE else View.VISIBLE
@@ -307,6 +318,14 @@ class MainActivity : AppCompatActivity() {
                 1 -> getString(R.string.suspect)
                 else -> getString(R.string.atteint)
             }
+        coronavirusStatus.setImageDrawable(
+            when (level) {
+                0 -> getDrawable(R.mipmap.coronavirus_sad)
+                1 -> getDrawable(R.mipmap.coronavirus_neutral)
+                else -> getDrawable(R.mipmap.coronavirus_happy)
+            }
+        )
+
     }
 
 

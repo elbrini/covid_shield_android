@@ -27,7 +27,7 @@
         <activity
             android:name="ma.covid.shield.activities.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:theme="@style/Theme.AppCompat.Light">
+            android:theme="@style/AppTheme.Settings">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ma.covid.shield.MainActivity" />

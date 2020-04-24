@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-   <include layout="@layout/background_layout"/>
+    android:layout_height="match_parent"
+    android:background="#00ffffff">
     <ImageView
         android:id="@+id/settingsButton"
         android:layout_marginEnd="@dimen/content_offset_h"
@@ -20,7 +20,8 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:layout_marginVertical="@dimen/content_offset_v"
-        android:layout_marginHorizontal="@dimen/content_offset_h">
+        android:layout_marginHorizontal="@dimen/content_offset_h"
+        android:clipChildren="false">
         <ImageView
             android:layout_width="41dp"
             android:layout_height="41dp"
@@ -58,27 +59,20 @@
             </ImageView>
         </LinearLayout>
         <FrameLayout
-            android:id="@+id/coronavirus_mood"
-            android:layout_width="173dp"
-            android:layout_height="175dp"
-            android:layout_marginTop="68dp">
-            <ImageView
-                android:layout_width="75dp"
-                android:layout_height="72dp"
-                android:layout_gravity="right"
-                android:src="@mipmap/coronavirus_sad"
-                />
+            android:layout_width="125dp"
+            android:layout_height="147dp"
+            android:layout_marginTop="68dp"
+            android:clipChildren="false">
             <ImageView
                 android:id="@+id/userStatus"
                 android:layout_width="125sp"
                 android:layout_height="147dp"
-                android:layout_marginTop="29dp"
                 android:src="@mipmap/user_green"/>
 
             <FrameLayout
                 android:layout_width="39dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="31dp"
                 android:layout_marginStart="8dp">
                 <ImageView
                     android:id="@+id/protectionStatus"
@@ -96,6 +90,15 @@
                     android:text="0%"
                     />
             </FrameLayout>
+            <ImageView
+                android:id="@+id/coronavirusStatus"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="-47dp"
+                android:layout_marginTop="-29dp"
+                android:src="@mipmap/coronavirus_sad"
+                />
         </FrameLayout>
         <TextView
             android:id="@+id/userProfile"
@@ -115,11 +118,12 @@
             android:layout_height="27dp"
             android:lineHeight="27dp"
             android:background="@mipmap/button_green"
-            android:textSize="17sp"
+            android:textSize="18sp"
+            android:paddingTop="4sp"
             android:gravity="center"
             android:fontFamily="@font/nexa_regular"
             android:textColor="#ffffffff"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:includeFontPadding="false"
             android:text="@string/positifButton" />
     </LinearLayout>

@@ -33,7 +33,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:contentDescription="@string/covidShieldLogoDescription"
-            android:src="@drawable/logo" />
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:layout_width="match_parent"
